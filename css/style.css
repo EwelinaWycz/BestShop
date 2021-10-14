@@ -2,6 +2,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --c-blue: #08A6E4;
+    --c-red: #FB3B64;
+    --c-green: #55DFB4;
+    --b-radius-box: 18px;
+    --b-radius-box-button: 23px
+}
+
 html {
     font-family: 'Open Sans', sans-serif;
     /* font-family: 'Raleway', sans-serif; */
