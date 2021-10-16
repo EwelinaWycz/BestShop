@@ -186,3 +186,19 @@ html {
 .info-icon-img {
     transform: translate(50%);
 }
+
+.info-icon-title {
+    font-family: var(--font-header);
+    letter-spacing: 5.96px;
+    color: black;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.info-icon-text {
+    font-family: var(--font-header);
+    color: #A5A5A5;
+    font-size: 16px;
+    margin-top: 0;
+}
+
