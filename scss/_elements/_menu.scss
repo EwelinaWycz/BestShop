@@ -1,0 +1,164 @@
+.menu-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: white;
+}
+  li {
+    a {
+      text-decoration: none;
+      color: #A5A5A5;
+      letter-spacing: 3px;
+      font-size: 11px;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 0 40px;
+      transition: 0.5s;
+      }
+    a:hover {
+      color: black;
+    }
+  }
+
+  .menu-btn {
+    &:hover {
+      background-color: #f4f4f4;
+    }
+
+    display: none;
+    &:checked {
+      ~ {
+        .menu {
+          max-height: 240px;
+          position: absolute;
+          left: 0;
+          top: 64px;
+          right: 0;
+        }
+
+        .menu-icon {
+          .navicon {
+            background: transparent;
+
+            &:before {
+              transform: rotate(-45deg);
+            }
+
+            &:after {
+              transform: rotate(45deg);
+            }
+          }
+
+          &:not(.steps) {
+            .navicon {
+              &:before {
+                top: 0;
+              }
+
+            &:after {
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu {
+  clear: both;
+  max-height: 0;
+  position: absolute;
+  transition: max-height .2s ease-out;
+}
+
+  .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    user-select: none;
+    position: relative;
+    left: 8px;
+    .navicon {
+      background: $c-blue;
+      display: block;
+      height: 2px;
+      position: relative;
+      transition: background .2s ease-out;
+      width: 18px;
+      &:before {
+        background: $c-blue;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+        top: 5px;
+      }
+      &:after {
+        background: $c-blue;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+        top: -5px;
+      }
+    }
+  }
+
+  @include desktop  {
+    .header {
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      li {
+        height: 100%;
+        float: left;
+        a {
+          padding: 20px 30px;
+        }
+      }
+      .menu {
+        height: 100%;
+        clear: none;
+        max-height: none;
+        position: relative;
+        background: transparent;
+      }
+      .menu-icon {
+        display: none;
+      }
+      .menu-list {
+        display: flex;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          height: 100%;
+        }
+        a {
+          height: 100%;
+          text-decoration: none;
+          color: #A5A5A5;
+          font-size: 11px;
+          font-weight: bold;
+          text-align: center;
+          text-transform: uppercase;
+          padding: 0 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: 0.5s;
+        }
+        a:hover {
+          color: black;
+          box-shadow: 0 -2px $c-blue inset;
+        }
+      }
+    }
+  }

@@ -1,0 +1,106 @@
+.pricing-boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 60px;
+  h3 {
+    font-family: $font-header;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  h2 {
+    font-weight: 100;
+    font-size: 46px;
+  }
+  p {
+    font-family: $font-header;
+    font-size: 12px;
+    font-weight: 800;
+    transform: translate(0, -40px);
+  }
+  li{
+    font-size: 14px;
+    line-height: 30px;
+    list-style: none;
+  }
+  li:nth-child(-n+5)::before {
+    content: ' ';
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin-right: 10px;
+    background: url(../../assets/ckechmark-1.svg);
+  }
+}
+
+.pricing-button {
+
+}
+
+.pricing-list-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 460px;
+  width: 370px;
+  border: 2px solid $c-red;
+  border-radius: $b-radius-box;
+  h2 {
+    color: $c-red;
+  }
+  p{
+    position: relative;
+    left: -9999999999999px;
+  }
+  li:nth-child(n+4)::before {
+    content: ' ';
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin-right: 10px;
+    background: url(../../assets/close.svg);
+  }
+}
+
+.pricing-list-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+  width: 405px;
+  border: 2px solid $c-blue;
+  border-radius: $b-radius-box;
+  box-shadow: 5px 10px 27px #07ACE629;
+  h3{
+    transform: translate(0, -15px);
+  }
+  h2 {
+    color: $c-blue;
+    transform: translate(0, -15px);
+  }
+  p {
+    transform: translate(0, -55px);
+  }
+  li:nth-child(5)::before {
+    content: ' ';
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin-right: 10px;
+    background: url(../../assets/close.svg);
+  }
+}
+
+.pricing-list-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 460px;
+  width: 370px;
+  border: 2px solid $c-green;
+  border-radius: $b-radius-box;
+  h2 {
+    color: $c-green;
+  }
+}
