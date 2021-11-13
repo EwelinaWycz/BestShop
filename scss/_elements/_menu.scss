@@ -4,7 +4,13 @@
   list-style: none;
   overflow: hidden;
   background-color: white;
+  box-shadow: 0 3px 6px #00000029;
 }
+
+.menu {
+  display: none;
+}
+
   li {
     a {
       text-decoration: none;
@@ -16,6 +22,7 @@
       text-transform: uppercase;
       padding: 0 40px;
       transition: 0.5s;
+      line-height: 30px;
       }
     a:hover {
       color: black;
@@ -31,11 +38,14 @@
     &:checked {
       ~ {
         .menu {
-          max-height: 240px;
-          position: absolute;
+          display: block;
+          height: 300px;
+          width: 100%;
           left: 0;
-          top: 64px;
+          top: 80px;
           right: 0;
+          box-shadow: 0 3px 6px #00000029;
+          gap: 30px;
         }
 
         .menu-icon {
@@ -69,8 +79,10 @@
 
 .menu {
   clear: both;
+  background: white;
   max-height: 0;
   position: absolute;
+  width: 100%;
   transition: max-height .2s ease-out;
 }
 
@@ -112,6 +124,7 @@
   }
 
   @include desktop  {
+
     .header {
       justify-content: space-between;
       flex-direction: row-reverse;
@@ -128,6 +141,7 @@
         max-height: none;
         position: relative;
         background: transparent;
+        display: block;
       }
       .menu-icon {
         display: none;
@@ -138,6 +152,8 @@
         margin: 0;
         padding: 0;
         list-style: none;
+        justify-content: flex-end;
+        box-shadow: none;
         li {
           height: 100%;
         }
