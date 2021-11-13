@@ -1,9 +1,13 @@
 .pricing-boxes {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   gap: 60px;
+  @include desktop {
+    flex-direction: unset;
+  }
   h3 {
     font-family: $font-header;
     font-size: 20px;
@@ -40,12 +44,23 @@
 
 .pricing-list-1 {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  height: 460px;
-  width: 370px;
+  align-items: center;
   border: 2px solid $c-red;
   border-radius: $b-radius-box;
+  text-align: left;
+  padding: 30px;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: unset;
+    text-align: unset;
+    height: 460px;
+    width: 370px;
+    padding: unset;
+  }
   h2 {
     color: $c-red;
   }
@@ -61,17 +76,26 @@
     margin-right: 10px;
     background: url(../../assets/close.svg);
   }
-}
 
 .pricing-list-2 {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  height: 500px;
-  width: 405px;
+  align-items: center;
+  text-align: left;
   border: 2px solid $c-blue;
   border-radius: $b-radius-box;
   box-shadow: 5px 10px 27px #07ACE629;
+  padding: 30px;
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: unset;
+    text-align: unset;
+    height: 500px;
+    width: 405px;
+    padding: unset;
+  }
   h3{
     transform: translate(0, -15px);
   }
@@ -94,12 +118,22 @@
 
 .pricing-list-3 {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  height: 460px;
-  width: 370px;
+  align-items: center;
+  text-align: left;
   border: 2px solid $c-green;
   border-radius: $b-radius-box;
+  padding: 30px;
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: unset;
+    text-align: unset;
+    height: 460px;
+    width: 370px;
+    padding: unset;
+  }
   h2 {
     color: $c-green;
   }
